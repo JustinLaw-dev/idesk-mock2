@@ -1,0 +1,339 @@
+.hero--margin-left {
+  margin-left: 2rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  min-width: 325px;
+}
+
+.container {
+  margin: 0 4rem;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1440px) {
+  .container {
+    margin: 0 3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 325px;
+    margin: 0 auto;
+  }
+}
+
+@font-face {
+  font-family: 'Verb';
+  src: url("./assets/fonts/Yellow Design Studio - VerbMedium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Verb';
+  src: url("./assets/fonts/Yellow Design Studio - VerbLight.otf") format("opentype");
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Verb', Arial, Helvetica, sans-serif;
+}
+
+.header__logo {
+  font-size: 4.8rem;
+  font-weight: 400;
+  letter-spacing: -2px;
+}
+
+.nav__list--item {
+  font-size: 3.8rem;
+}
+
+.hero__heading {
+  font-size: 8.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero__heading {
+    font-size: 7.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero__heading {
+    line-height: 0.9;
+    font-size: 8rem;
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__heading {
+    font-size: 6.5rem;
+    width: 68%;
+  }
+}
+
+.hero__text {
+  color: black;
+  font-size: 3.1rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero__text {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero__text {
+    color: white;
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__text {
+    font-size: 2rem;
+  }
+}
+
+.hero__text--d {
+  font-size: 4.1rem;
+}
+
+.hero__text--d, .hero__text--name {
+  font-weight: 500;
+}
+
+.hero__btn {
+  font-size: 1.6rem;
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 1px solid black;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero__btn {
+    opacity: 0;
+  }
+}
+
+.nav__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav__list--icon {
+  width: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+  .nav__list--icon {
+    margin-left: 2rem;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 0px 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 0px 6rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 0px 1rem;
+  }
+}
+
+.hero {
+  background: #f0ebe8;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero {
+    height: 89vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero {
+    background: url("../../assets/img/tablet bg copy1.png");
+    background-size: cover;
+    height: 92vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    background: url("../../assets/img/tablet bg copy1.png");
+    background-size: cover;
+    height: 90vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero {
+    background: url("../../assets/img/phone bg.jpg");
+    background-size: cover;
+    background-position-x: -26px;
+    height: 95vh;
+  }
+}
+
+.hero__text--wrapper {
+  position: absolute;
+  top: 20%;
+  left: 8.5%;
+}
+
+.hero__btn {
+  position: absolute;
+  top: 55%;
+  left: 8.5%;
+}
+
+.hero__img {
+  max-width: 100%;
+  position: absolute;
+  top: 60%;
+  right: -33%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .hero__img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,52 @@
+.hero {
+  background: #f0ebe8;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+
+  @include respond(small-desktop) {
+    height: 89vh;
+  }
+  @include respond(tab-port-pro) {
+    background: url('../../assets/img/tablet\ bg\ copy1.png');
+    background-size: cover;
+    height: 92vh;
+  }
+
+  @include respond(tab-port) {
+    background: url('../../assets/img/tablet\ bg\ copy1.png');
+    background-size: cover;
+    height: 90vh;
+  }
+
+  @include respond(phone) {
+    background: url('../../assets/img/phone\ bg.jpg');
+    background-size: cover;
+    background-position-x: -26px;
+    height: 95vh;
+  }
+
+  &__text--wrapper {
+    position: absolute;
+    top: 20%;
+    left: 8.5%;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 55%;
+    left: 8.5%;
+  }
+
+  &__img {
+    max-width: 100%;
+    position: absolute;
+    top: 60%;
+    right: -33%;
+
+    @include respond(tab-port-pro) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-port-pro) {
+    font-size: 56.25%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+body {
+  min-width: 325px;
+}
+
+.container {
+  margin: 0 4rem;
+  overflow: hidden;
+
+  @include respond(small-desktop) {
+    margin: 0 3rem;
+  }
+
+  @include respond(phone) {
+    width: 325px;
+    margin: 0 auto;
+  }
+}

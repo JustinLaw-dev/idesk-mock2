@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Verb';
+  src: url('./assets/fonts/Yellow\ Design\ Studio\ -\ VerbMedium.otf')
+    format('opentype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Verb';
+  src: url('./assets/fonts/Yellow\ Design\ Studio\ -\ VerbLight.otf')
+    format('opentype');
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Verb', Arial, Helvetica, sans-serif;
+}
+
+.header {
+  &__logo {
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: -2px;
+  }
+}
+
+.nav__list {
+  &--item {
+    font-size: 3.8rem;
+  }
+}
+
+.hero {
+  &__heading {
+    font-size: 8.5rem;
+    font-weight: 500;
+    color: white;
+
+    @include respond(small-desktop) {
+      font-size: 7.5rem;
+    }
+
+    @include respond(tab-port-pro) {
+      line-height: 0.9;
+      font-size: 8rem;
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      font-size: 6.5rem;
+      width: 68%;
+    }
+  }
+
+  &__text {
+    color: black;
+    font-size: 3.1rem;
+
+    @include respond(small-desktop) {
+      font-size: 2.6rem;
+    }
+
+    @include respond(tab-port-pro) {
+      color: white;
+      font-size: 2.6rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    &--d {
+      font-size: 4.1rem;
+    }
+
+    &--d,
+    &--name {
+      font-weight: 500;
+    }
+  }
+}

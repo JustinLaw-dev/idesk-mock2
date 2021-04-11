@@ -1,0 +1,12 @@
+.hero__btn {
+  font-size: 1.6rem;
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  border: 1px solid black;
+  opacity: 1;
+
+  @include respond(tab-port-pro) {
+    opacity: 0;
+  }
+}
