@@ -22,6 +22,10 @@ body {
     margin: 0 3rem;
   }
 
+  @include respond(phone-land) {
+    margin: 0 2.2vw;
+  }
+
   @include respond(phone) {
     width: 325px;
     margin: 0 auto;

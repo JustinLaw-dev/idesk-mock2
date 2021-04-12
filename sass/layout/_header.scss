@@ -9,7 +9,14 @@
     padding: 0px 6rem;
   }
 
+  @include respond(phone-land) {
+    margin-left: 9%;
+    padding: 0;
+    height: 10vh;
+  }
+
   @include respond(phone) {
+    height: 5.79vh;
     padding: 0px 1rem;
   }
 }

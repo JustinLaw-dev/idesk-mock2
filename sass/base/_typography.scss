@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Verb';
-  src: url('./assets/fonts/Yellow\ Design\ Studio\ -\ VerbMedium.otf')
+  src: url('../../assets/fonts/Yellow\ Design\ Studio\ -\ VerbMedium.otf')
     format('opentype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Verb';
-  src: url('./assets/fonts/Yellow\ Design\ Studio\ -\ VerbLight.otf')
+  src: url('../../assets/fonts/Yellow\ Design\ Studio\ -\ VerbLight.otf')
     format('opentype');
   font-weight: 400;
 }
@@ -21,6 +21,16 @@ body {
     font-size: 4.8rem;
     font-weight: 400;
     letter-spacing: -2px;
+
+    @include respond(phone-land) {
+      font-size: 2.6rem;
+      letter-spacing: -1px;
+    }
+
+    @include respond(phone) {
+      margin-left: 30%;
+      font-size: 3.8rem;
+    }
   }
 }
 
@@ -50,10 +60,21 @@ body {
       font-size: 6.5rem;
       width: 68%;
     }
+
+    @include respond(phone-land) {
+      font-size: 3.8rem;
+      width: 30vw;
+      line-height: 0.9;
+    }
+
+    @include respond(phone) {
+      font-size: 3.75rem;
+      width: 65%;
+    }
   }
 
   &__text {
-    color: black;
+    color: white;
     font-size: 3.1rem;
 
     @include respond(small-desktop) {
@@ -61,11 +82,22 @@ body {
     }
 
     @include respond(tab-port-pro) {
-      color: white;
       font-size: 2.6rem;
     }
     @include respond(tab-port) {
       font-size: 2rem;
+    }
+
+    @include respond(phone-land) {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-top: 5%;
+      letter-spacing: 1px;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+      font-weight: 400;
     }
 
     &--d {
