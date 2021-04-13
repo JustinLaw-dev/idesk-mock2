@@ -10,6 +10,17 @@
   @include respond(small-desktop) {
     height: 89vh;
   }
+
+  @include respond(tab-land-pro) {
+    background: url('../../assets/img/bg-tabLand.png');
+    background-size: cover;
+  }
+
+  @include respond(tab-land) {
+    background: url('../../assets/img/bg-tabLand.png');
+    background-size: cover;
+  }
+
   @include respond(tab-port-pro) {
     background-size: cover;
     height: 92vh;
