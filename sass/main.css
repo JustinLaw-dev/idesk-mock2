@@ -100,30 +100,50 @@ html {
 
 body {
   min-width: 325px;
+  overflow: hidden;
 }
 
 .container {
-  margin: 0 36px 36px 36px;
-  overflow: hidden;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 36px 36px 36px;
 }
 
 @media only screen and (max-width: 1440px) {
   .container {
-    margin: 0 3rem;
+    padding: 0 3rem 3rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+  .container {
+    padding-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    padding: 0 3.33rem 3.33rem 3.33rem;
   }
 }
 
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .container {
-    margin: 0 2.2vw;
+    padding: 0 18px 18px 18px;
   }
 }
 
 @media only screen and (max-width: 380px) and (orientation: portrait) {
   .container {
-    width: 325px;
-    margin: 0 auto;
+    padding: 0 18px;
   }
+}
+
+.snap-section {
+  scroll-snap-align: start;
 }
 
 @font-face {
@@ -163,7 +183,6 @@ body {
 
 @media only screen and (max-width: 380px) and (orientation: portrait) {
   .header__logo {
-    margin-left: 30%;
     font-size: 3.8rem;
   }
 }
@@ -173,7 +192,7 @@ body {
 }
 
 .hero__heading {
-  font-size: 7.5rem;
+  font-size: 7rem;
   font-weight: 500;
   color: white;
   width: 45%;
@@ -209,9 +228,15 @@ body {
 
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .hero__heading {
-    font-size: 3.8rem;
-    width: 30vw;
-    line-height: 0.9;
+    font-size: 3.1rem;
+    width: 28vw;
+    line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 668px) and (orientation: landscape) {
+  .hero__heading {
+    font-size: 2.8rem;
   }
 }
 
@@ -224,9 +249,10 @@ body {
 
 .hero__text {
   color: white;
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 400;
   margin-top: 1rem;
+  letter-spacing: 1.2px;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -235,38 +261,54 @@ body {
   }
 }
 
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+  .hero__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
+}
+
 @media only screen and (max-width: 1280px) and (orientation: landscape) {
   .hero__text {
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 }
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .hero__text {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
+    margin-top: 3rem;
   }
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   .hero__text {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .hero__text {
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    margin-top: 5%;
+    margin-top: 6%;
     letter-spacing: 1px;
+  }
+}
+
+@media only screen and (max-width: 668px) and (orientation: landscape) {
+  .hero__text {
+    font-size: 0.75rem;
+    margin-top: 14%;
   }
 }
 
 @media only screen and (max-width: 380px) and (orientation: portrait) {
   .hero__text {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 400;
+    letter-spacing: 0;
   }
 }
 
@@ -276,6 +318,25 @@ body {
 
 .hero__text--d, .hero__text--name {
   font-weight: 500;
+}
+
+@media only screen and (max-width: 668px) and (orientation: landscape) {
+  #heroTextWrapper2 {
+    top: 15%;
+    left: 6%;
+  }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  #heroText2 {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 668px) and (orientation: landscape) {
+  #heroText2 {
+    margin-top: 12%;
+  }
 }
 
 .hero__btn {
@@ -294,7 +355,7 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 92%;
   margin-left: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,15 +382,9 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) and (orientation: portrait) {
-  .header {
-    padding: 0px 6rem;
-  }
-}
-
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .header {
-    margin-left: 9%;
+    margin-left: 6%;
     padding: 0;
     height: 10vh;
   }
@@ -337,8 +392,9 @@ body {
 
 @media only screen and (max-width: 380px) and (orientation: portrait) {
   .header {
+    padding: 0;
     height: 5.79vh;
-    padding: 0px 1rem;
+    margin-left: 8%;
   }
 }
 
@@ -348,48 +404,58 @@ body {
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 94vh;
   overflow: hidden;
 }
 
 @media only screen and (max-width: 1440px) {
   .hero {
-    height: 89vh;
+    height: 93vh;
   }
 }
 
 @media only screen and (max-width: 1366px) and (orientation: landscape) {
   .hero {
     background: url("../../assets/img/bg-tabLand.png");
-    background-size: cover;
+    background-size: 100% 100%;
+    height: 94vh;
   }
 }
 
 @media only screen and (max-width: 1280px) and (orientation: landscape) {
   .hero {
     background: url("../../assets/img/bg-tabLand.png");
-    background-size: cover;
+    background-size: 100% 100%;
   }
 }
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .hero {
-    background-size: cover;
-    height: 92vh;
+    background: url("../../assets/img/bg-tabPort.png");
+    background-size: 100% 100%;
+    height: 96vh;
   }
 }
 
 @media only screen and (max-width: 768px) and (orientation: portrait) {
   .hero {
-    background-size: cover;
+    background-size: 100% 100%;
+    height: 94vh;
+  }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  .hero {
+    background: url("../../assets/img/bg-phoneLand.png");
+    background-size: 100% 100%;
     height: 90vh;
   }
 }
 
 @media only screen and (max-width: 380px) and (orientation: portrait) {
   .hero {
-    background-size: cover;
-    background-position-x: -26px;
+    background: url("../../assets/img/bg-phonePort.png");
+    background-size: 100% 100%;
     height: 95vh;
   }
 }
@@ -400,9 +466,16 @@ body {
   left: 8%;
 }
 
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .hero__text--wrapper {
+    top: 20%;
+  }
+}
+
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .hero__text--wrapper {
     top: 12%;
+    left: 6%;
   }
 }
 
@@ -422,6 +495,47 @@ body {
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   .hero__img {
     display: none;
+  }
+}
+
+.hero-section {
+  background: url("../../assets/img/bg-desktop1920x1080.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 97vh;
+}
+
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+  .hero-section {
+    background: url("../../assets/img/bg-tabLand.png");
+    background-size: 100% 100%;
+    height: 97vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .hero-section {
+    background: url("../../assets/img/bg-tabPort.png");
+    background-size: 100% 100%;
+    height: 98vh;
+  }
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  .hero-section {
+    background: url("../../assets/img/bg-phoneLand.png");
+    background-size: 100% 100%;
+    height: 96vh;
+  }
+}
+
+@media only screen and (max-width: 380px) and (orientation: portrait) {
+  .hero-section {
+    background: url("../../assets/img/bg-phonePort.png");
+    background-size: 100% 100%;
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=main.css.map */

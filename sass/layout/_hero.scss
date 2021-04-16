@@ -4,36 +4,44 @@
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 94vh;
   overflow: hidden;
 
   @include respond(small-desktop) {
-    height: 89vh;
+    height: 93vh;
   }
 
   @include respond(tab-land-pro) {
     background: url('../../assets/img/bg-tabLand.png');
-    background-size: cover;
+    background-size: 100% 100%;
+    height: 94vh;
   }
 
   @include respond(tab-land) {
     background: url('../../assets/img/bg-tabLand.png');
-    background-size: cover;
+    background-size: 100% 100%;
   }
 
   @include respond(tab-port-pro) {
-    background-size: cover;
-    height: 92vh;
+    background: url('../../assets/img/bg-tabPort.png');
+    background-size: 100% 100%;
+    height: 96vh;
   }
 
   @include respond(tab-port) {
-    background-size: cover;
+    background-size: 100% 100%;
+    height: 94vh;
+  }
+
+  @include respond(phone-land) {
+    background: url('../../assets/img/bg-phoneLand.png');
+    background-size: 100% 100%;
     height: 90vh;
   }
 
   @include respond(phone) {
-    background-size: cover;
-    background-position-x: -26px;
+    background: url('../../assets/img/bg-phonePort.png');
+    background-size: 100% 100%;
     height: 95vh;
   }
 
@@ -42,8 +50,13 @@
     top: 9%;
     left: 8%;
 
+    @include respond(tab-port-pro) {
+      top: 20%;
+    }
+
     @include respond(phone-land) {
       top: 12%;
+      left: 6%;
     }
   }
 
@@ -62,5 +75,38 @@
     @include respond(tab-port-pro) {
       display: none;
     }
+  }
+}
+
+.hero-section {
+  background: url('../../assets/img/bg-desktop1920x1080.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 97vh;
+
+  @include respond(tab-land-pro) {
+    background: url('../../assets/img/bg-tabLand.png');
+    background-size: 100% 100%;
+    height: 97vh;
+  }
+
+  @include respond(tab-port-pro) {
+    background: url('../../assets/img/bg-tabPort.png');
+    background-size: 100% 100%;
+    height: 98vh;
+  }
+
+  @include respond(phone-land) {
+    background: url('../../assets/img/bg-phoneLand.png');
+    background-size: 100% 100%;
+    height: 96vh;
+  }
+
+  @include respond(phone) {
+    background: url('../../assets/img/bg-phonePort.png');
+    background-size: 100% 100%;
+    height: 100vh;
   }
 }

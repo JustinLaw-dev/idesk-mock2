@@ -5,6 +5,12 @@
     }
   }
 
+  @if $breakpoint == phone-land-small {
+    @media only screen and (max-width: 668px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
   @if $breakpoint == phone-land {
     @media only screen and (max-width: 812px) and (orientation: landscape) {
       @content;

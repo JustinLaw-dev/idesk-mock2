@@ -1,5 +1,5 @@
 .header {
-  width: 100%;
+  width: 92%;
   margin-left: 8%;
   display: flex;
   justify-content: space-between;
@@ -16,17 +16,17 @@
   }
 
   @include respond(tab-port) {
-    padding: 0px 6rem;
   }
 
   @include respond(phone-land) {
-    margin-left: 9%;
+    margin-left: 6%;
     padding: 0;
     height: 10vh;
   }
 
   @include respond(phone) {
+    padding: 0;
     height: 5.79vh;
-    padding: 0px 1rem;
+    margin-left: 8%;
   }
 }
