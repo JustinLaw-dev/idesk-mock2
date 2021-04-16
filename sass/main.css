@@ -92,7 +92,7 @@ html {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   html {
     font-size: 50%;
   }
@@ -136,7 +136,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .container {
     padding: 0 18px;
   }
@@ -181,7 +181,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .header__logo {
     font-size: 3.8rem;
   }
@@ -240,7 +240,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .hero__heading {
     font-size: 3.75rem;
     width: 65%;
@@ -304,7 +304,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .hero__text {
     font-size: 1rem;
     font-weight: 400;
@@ -390,7 +390,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .header {
     padding: 0;
     height: 5.79vh;
@@ -452,7 +452,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .hero {
     background: url("../../assets/img/bg-phonePort.png");
     background-size: 100% 100%;
@@ -531,7 +531,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 380px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) and (orientation: portrait) {
   .hero-section {
     background: url("../../assets/img/bg-phonePort.png");
     background-size: 100% 100%;
